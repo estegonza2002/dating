@@ -23,7 +23,7 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 $text-color: #152934;
-$background-color: #F4F4F4;
+$background-color: #152934;
 
 
 // Named Color Variables
@@ -41,13 +41,14 @@ $colors: (
   success:    #7ED321,
   light:      #f4f4f4,
   dark:       #152934,
-  grey1:      #5A6871,
+  grey1:      (base: #5A6871, contrast: #f4f4f4),
   grey2:      #A6B0B8,
   grey3:      #F1F1F1,
   twitter:    (base: #55acee,contrast: #ffffff),
   facebook:   (base: #3B5998,contrast: #ffffff),
   male:       #4A90E2,
   female:     #E2387E,
+  white:      #fff
 );
 
 

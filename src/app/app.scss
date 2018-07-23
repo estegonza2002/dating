@@ -1,20 +1,3 @@
-// http://ionicframework.com/docs/theming/
-
-
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
-
 ion-grid {
   &[explore] {
     padding: 0.5rem;
@@ -28,8 +11,10 @@ ion-grid {
     ion-card {
       width: 100%;
       margin: 0 0 1rem 0;
+      background-color: color($colors, white);
       ion-item {
         padding-left: 8px;
+        background-color: color($colors, white);
         h1 {
           font-size: 1.4rem;
           font-weight: bold;
@@ -52,17 +37,111 @@ ion-grid {
     ion-card {
       width: 100%;
       margin: 0 0 1rem 0;
+      background-color: color($colors, white);
       ion-card-content {
-        margin: 0;
+        padding: 0;
       }
       .button {
         margin: 0px;
       }
       ion-item {
         padding-left: 8px;
+        background-color: color($colors, white);
         h1 {
           font-size: 2rem;
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+ion-list {
+  &[chat] {
+    ion-item {
+      background-color: color($colors, white);
+    }
+  }
+  &[messages] {
+    ion-item {
+      background-color: color($colors, white);
+    }
+  }
+}
+
+ion-card {
+  &[profile-detail-card] {
+    background-color: color($colors, white);
+    ion-card-header {
+      background-color: color($colors, grey1);
+      color: color($colors, light);
+      padding: 16px 8px;
+    }
+    ion-card-content {
+      padding: 8px;
+      p {
+        color: color($colors, grey1);
+      }
+    }
+    ion-grid {
+      &[profile-grid] {
+        padding: 0;
+        ion-row {
+          margin: 0;
+          padding: 1rem 0;
+          border-bottom: 1px solid color($colors, grey3);
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+        ion-col {
+          padding: 0;
+          &[male] {
+            p {
+              color: color($colors, male);
+            }
+          }
+          &[female] {
+            p {
+            color: color($colors, female);
+            }
+          }
+          h2 {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: color($colors, grey1);
+          }
+          ion-list {
+            ion-item {
+              font-size: 1.4rem;
+              padding-left: 0;
+              min-height: 2.4rem;
+              background-color: color($colors, white);
+              ion-label {
+                white-space: normal;
+                margin: 2px 8px 2px 0px;
+                color: color($colors, grey1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+ion-toolbar {
+  &[profile-detail-toolbar] {
+    padding: 0;
+    min-height: 0;
+    ion-grid {
+      margin: 0;
+      padding: 0;
+      ion-row {
+        margin: 0 6px;
+        padding: 0;
+        ion-col {
+          .button {
+            margin: 0px;
+          }
         }
       }
     }

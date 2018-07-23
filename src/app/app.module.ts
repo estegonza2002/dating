@@ -10,8 +10,11 @@ import { HomePage } from '../pages/home/home';
 import { ExplorePage } from '../pages/explore/explore';
 import { ConnectPage } from '../pages/connect/connect';
 import { EventsPage } from '../pages/events/events';
+import { UserDetailPage } from '../pages/user-detail/user-detail';
 
 import { TabsPage } from '../pages/tabs/tabs';
+
+import { EventComponent } from '../components/event/event';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,14 +25,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExplorePage,
     ConnectPage,
     EventsPage,
+    UserDetailPage,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    EventComponent
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp, {
+      backButtonText: '',
       mode:'ios'
     })
   ],
@@ -39,6 +45,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ExplorePage,
     ConnectPage,
     EventsPage,
+    UserDetailPage,
     AboutPage,
     ContactPage,
     HomePage,

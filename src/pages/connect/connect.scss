@@ -1,4 +1,10 @@
 page-connect {
+  ion-toolbar {
+    &[connect] {
+      padding:0 0 2px 0;
+      min-height: 0;
+    }
+  }
   ion-note {
     font-size: 12px;
     align-self: flex-start;

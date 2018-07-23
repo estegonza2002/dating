@@ -1,5 +1,10 @@
 <ion-header no-border>
   <ion-navbar color="grey3">
+    <ion-buttons start>
+      <button color="grey2" ion-button icon-only>
+        <ion-icon name="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>Connect</ion-title>
     <ion-buttons end>
       <button color="primary" ion-button icon-only>
@@ -7,8 +12,8 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar color="grey3" mode="md" padding-left padding-right>
-    <ion-segment mode="md" color="primary">
+  <ion-toolbar connect color="grey1" mode="md">
+    <ion-segment mode="md" color="grey3">
       <ion-segment-button value="chat">Chat</ion-segment-button>
       <ion-segment-button value="messages">Messages</ion-segment-button>
     </ion-segment>
@@ -17,7 +22,7 @@
 
 
 <ion-content>
-  <ion-list>
+  <ion-list chat>
     <ion-item>
       <ion-avatar item-start>
         <img src="assets/imgs/users/user-name/public/pic1.png">
@@ -36,8 +41,8 @@
     </ion-item>
   </ion-list>
 
-  <ion-list>
-    <ion-item>
+  <ion-list messages>
+    <ion-item detail-push>
       <ion-avatar item-start>
         <img src="assets/imgs/users/user-name/public/pic1.png">
       </ion-avatar>
@@ -45,7 +50,7 @@
       <h3>I'm a big deal</h3>
       <p>Listen, I've had a pretty messed up day...</p>
     </ion-item>
-    <ion-item>
+    <ion-item detail-push>
       <ion-avatar item-start>
         <img src="assets/imgs/users/user-name/public/pic1.png">
       </ion-avatar>

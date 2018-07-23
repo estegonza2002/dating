@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the ExplorePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+// Import pages here
+import { UserDetailPage } from '../user-detail/user-detail';
+
 
 @IonicPage()
 @Component({
@@ -16,6 +13,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ExplorePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  openUserDetailPage(){
+    this.navCtrl.push(UserDetailPage)
   }
 
   ionViewDidLoad() {
