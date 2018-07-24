@@ -1,4 +1,29 @@
+.five-hundred {
+  max-width: 500px !important;
+  margin: 0 auto !important;
+}
+ion-content {
+  p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin: 0 0 1.6rem 0;
+  }
+}
 ion-grid {
+  &[user-type] {
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    ion-row {
+      margin: 0;
+      padding: 0;
+    }
+    ion-col {
+      padding: 0.5rem;
+      ion-item {
+        border-radius: 5px;
+      }
+    }
+
+  }
   &[explore] {
     padding: 0.5rem;
     ion-row {
@@ -10,6 +35,7 @@ ion-grid {
     }
     ion-card {
       width: 100%;
+      border-radius: 5px;
       margin: 0 0 1rem 0;
       background-color: color($colors, white);
       ion-item {
@@ -36,16 +62,16 @@ ion-grid {
     }
     ion-card {
       width: 100%;
+      border-radius: 5px;
       margin: 0 0 1rem 0;
       background-color: color($colors, white);
       ion-card-content {
         padding: 0;
       }
-      .button {
+      .button-btm {
         margin: 0px;
       }
       ion-item {
-        padding-left: 8px;
         background-color: color($colors, white);
         h1 {
           font-size: 2rem;
@@ -66,11 +92,23 @@ ion-list {
       background-color: color($colors, white);
     }
   }
+  &[form-list] {
+    ion-item {
+      border-bottom: 1px solid color($colors, grey2) !important;
+    }
+    ion-icon[item-left], {
+      margin-bottom: -12px;
+    }
+    ion-label {
+      color: color($colors, grey1);
+    }
+  }
 }
 
 ion-card {
   &[profile-detail-card] {
     background-color: color($colors, white);
+    border-radius: 5px;
     ion-card-header {
       background-color: color($colors, grey1);
       color: color($colors, light);
@@ -129,6 +167,8 @@ ion-card {
   }
 }
 ion-toolbar {
+  padding: 0 !important;
+  min-height: 43px !important;
   &[profile-detail-toolbar] {
     padding: 0;
     min-height: 0;
@@ -144,6 +184,19 @@ ion-toolbar {
           }
         }
       }
+    }
+  }
+}
+ion-slides {
+  &[profile-slide] {
+    max-width: 500px;
+    margin: 0 auto;
+    max-height: 375px;
+    .swiper-pagination-bullet-active {
+      background-color: color($colors, secondary) !important;
+    }
+    .swiper-pagination-bullet {
+      background-color: color($colors, white);
     }
   }
 }

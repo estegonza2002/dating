@@ -23,7 +23,7 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
 $text-color: #152934;
-$background-color: #152934;
+$background-color: #D2D7DB;
 
 
 // Named Color Variables
@@ -44,6 +44,7 @@ $colors: (
   grey1:      (base: #5A6871, contrast: #f4f4f4),
   grey2:      #A6B0B8,
   grey3:      #F1F1F1,
+  grey4:      #D2D7DB,
   twitter:    (base: #55acee,contrast: #ffffff),
   facebook:   (base: #3B5998,contrast: #ffffff),
   male:       #4A90E2,
@@ -56,7 +57,7 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$item-ios-detail-push-color: color($colors, grey2);
 
 
 // App Material Design Variables

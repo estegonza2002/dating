@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="five-hundred">
+    <form>
+      <ion-list form-list no-lines>
+        <h3>Create Event</h3>
+        <p>Use this feature to post a private, non commercial party on your profile. Fill out the form below starting with the date, title and description, then you may select the criteria for those you would like to attend or simply select Allow all invitations.</p>
+        <ion-item >
+          <ion-label stacked>Event Name</ion-label>
+          <ion-input type="text" placeholder="Ex: Boots & Bikinis"></ion-input>
+        </ion-item>
+        <ion-item >
+          <ion-label stacked>Description</ion-label>
+          <ion-textarea type="text" placeholder="Tell us all about this party!"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label>Event Date</ion-label>
+          <ion-datetime displayFormat="MMM DD, YY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Event Start Time</ion-label>
+          <ion-datetime displayFormat="hh:mm a"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Event End Time</ion-label>
+          <ion-datetime displayFormat="hh:mm a" ></ion-datetime>
+        </ion-item>
+        <h5>Allow all invitations</h5>
+        <ion-grid user-type>
+          <ion-row>
+            <ion-col>
+              <ion-item color="grey3">
+               <ion-label>Yes</ion-label>
+               <ion-checkbox checked="true"></ion-checkbox>
+             </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item color="grey3">
+               <ion-label>No</ion-label>
+               <ion-checkbox></ion-checkbox>
+             </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <h5>Status</h5>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+               <ion-label>Yes</ion-label>
+               <ion-checkbox></ion-checkbox>
+             </ion-item>
+             <ion-item>
+              <ion-label>Yes</ion-label>
+              <ion-checkbox></ion-checkbox>
+            </ion-item>
+            <ion-item>
+             <ion-label>Yes</ion-label>
+             <ion-checkbox></ion-checkbox>
+           </ion-item>
+           <ion-item>
+            <ion-label>Yes</ion-label>
+            <ion-checkbox></ion-checkbox>
+          </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item>
+               <ion-label>No</ion-label>
+               <ion-checkbox></ion-checkbox>
+             </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ion-list>
+      <button ion-button block>Create Event</button>
+    </form>
+  </div>
+</ion-content>

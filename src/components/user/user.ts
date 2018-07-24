@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+// Import pages here
+import { UserDetailPage } from '../../pages/user-detail/user-detail';
 
 /**
  * Generated class for the UserComponent component.
@@ -14,9 +18,11 @@ export class UserComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public navCtrl: NavController) {
     console.log('Hello UserComponent Component');
     this.text = 'Hello World';
   }
-
+  openUserDetailPage(){
+    this.navCtrl.push(UserDetailPage)
+  }
 }

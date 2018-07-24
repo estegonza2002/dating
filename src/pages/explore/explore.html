@@ -1,67 +1,52 @@
-<ion-header no-border>
-  <ion-navbar color="grey3">
-    <ion-buttons start>
-      <button color="grey2" ion-button icon-only>
-        <ion-icon name="ios-contacts"></ion-icon>
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start (click)="openUserSettingsPage()">
+      <button ion-button icon-only>
+        <ion-icon name="md-contact"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>Network Name</ion-title>
     <ion-buttons end>
-      <button color="grey2" ion-button icon-only>
+      <button ion-button icon-only>
         <ion-icon name="md-options"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar color="grey3">
+  <!-- <ion-toolbar>
     <ion-searchbar></ion-searchbar>
+  </ion-toolbar> -->
+  <ion-toolbar mode="md">
+    <ion-segment mode="md" color="dark">
+      <ion-segment-button value="online">Online</ion-segment-button>
+      <ion-segment-button value="around-me">Around me</ion-segment-button>
+      <ion-segment-button value="viewed-me">Viewed Me</ion-segment-button>
+      <ion-segment-button value="Search">Search</ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
-  <ion-toolbar color="grey1" padding-left padding-right>
-    <span ion-text color="grey3">Filters:</span>
+
+</ion-header>
+
+<ion-content>
+  <div padding>
+    <span ion-text color="grey1">Filters:</span>
     <ion-chip color="secondary">
       <ion-label>Selection</ion-label>
       <button ion-button clear color="light">
         <ion-icon name="md-close-circle"></ion-icon>
       </button>
     </ion-chip>
-    <ion-chip color="dark">
+    <ion-chip color="grey2">
       <ion-label>Clear All</ion-label>
       <button ion-button clear color="light">
         <ion-icon name="md-arrow-round-back"></ion-icon>
       </button>
     </ion-chip>
-  </ion-toolbar>
-</ion-header>
+  </div>
 
-<ion-content>
   <ion-grid explore>
     <ion-row>
-      <ion-col col-6 col-md-3 col-lg-2>
-        <ion-card (click)="openUserDetailPage()">
-          <ion-item>
-            <h1>Estegonza2002</h1>
-            <p>Chicago, IL - (2.6 mi)</p>
-            <button ion-button clear icon-only item-end><ion-icon color="grey2" name="ios-chatbubbles-outline"></ion-icon></button>
-          </ion-item>
-          <div><img src="assets/imgs/users/user-name/public/pic1.png" /></div>
-          <ion-item>
-            <button ion-button icon-start item-start outline color="grey2"><ion-icon name="md-camera"></ion-icon> 5</button>
-            <div item-end><ion-badge color="female">34</ion-badge> <ion-badge color="male">45</ion-badge></div>
-          </ion-item>
-        </ion-card>
-      </ion-col>
-      <ion-col col-6 col-md-3 col-lg-2>
-        <ion-card (click)="openUserDetailPage()">
-          <ion-item>
-            <h1>Estegonza2002</h1>
-            <p>Chicago, IL - (2.6 mi)</p>
-            <button ion-button clear icon-only item-end><ion-icon color="success" name="ios-chatbubbles"></ion-icon></button>
-          </ion-item>
-          <div><img src="assets/imgs/users/user-name/public/pic1.png" /></div>
-          <ion-item>
-            <button ion-button icon-start item-start outline color="grey2"><ion-icon name="md-camera"></ion-icon> 5</button>
-            <div item-end><ion-badge color="male">45</ion-badge></div>
-          </ion-item>
-        </ion-card>
+      <ion-col *ngFor="let user of users" col-6 col-md-3 col-lg-2>
+        <user></user>
       </ion-col>
     </ion-row>
   </ion-grid>

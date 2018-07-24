@@ -1,26 +1,27 @@
-<ion-header no-border>
-  <ion-navbar color="grey3">
+<!-- <ion-header no-border [elasticheader]="myContent"> -->
+<ion-header>
+  <ion-navbar>
     <ion-title>Estegonza2002</ion-title>
     <ion-buttons end>
-      <button color="grey2" ion-button icon-only>
+      <button ion-button icon-only (click)="presentPopover($event)">
         <ion-icon name="ios-more"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar profile-detail-toolbar color="dark" mode="md">
+  <ion-toolbar profile-detail-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button block  icon-only color="grey1" icon-start><ion-icon name="ios-chatbubbles" ></ion-icon></button>
+          <button ion-button block  icon-only color="grey1"><ion-icon name="ios-chatbubbles" ></ion-icon></button>
         </ion-col>
         <ion-col>
-          <button ion-button block icon-only color="grey1" icon-start><ion-icon name="ios-mail" ></ion-icon></button>
+          <button ion-button block icon-only color="grey1"><ion-icon name="ios-mail" ></ion-icon></button>
         </ion-col>
         <ion-col>
-          <button ion-button block  icon-only color="grey1" icon-start><ion-icon name="md-person-add" ></ion-icon> </button>
+          <button ion-button block  icon-only color="grey1"><ion-icon name="md-person-add" ></ion-icon> </button>
         </ion-col>
         <ion-col>
-          <button ion-button block icon-only color="grey1" icon-start><ion-icon name="md-heart" ></ion-icon></button>
+          <button ion-button block icon-only color="grey1"><ion-icon name="md-heart" ></ion-icon></button>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -28,18 +29,18 @@
 </ion-header>
 
 
-<ion-content>
-  <!-- <ion-slides pager="true" parallax="true" zoom="true">
+<ion-content has-bouncing="false" fullscreen #myContent>
+  <ion-slides profile-slide pager="true" loop="true" parallax="true">
     <ion-slide>
-      <img src="assets/imgs/users/user-name/public/profile-pic-1.jpg" />
+      <img src="assets/imgs/users/user-name/public/profile-pic-1.jpg" imageViewer/>
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/users/user-name/public/profile-pic-2.jpg" />
+      <img src="assets/imgs/users/user-name/public/profile-pic-2.jpg" imageViewer/>
     </ion-slide>
     <ion-slide>
-      <img src="assets/imgs/users/user-name/public/profile-pic-3.jpg" />
+      <img src="assets/imgs/users/user-name/public/profile-pic-3.jpg" imageViewer/>
     </ion-slide>
-  </ion-slides> -->
+  </ion-slides>
 
   <ion-card profile-detail-card>
     <ion-card-header>Info</ion-card-header>
@@ -64,11 +65,11 @@
           <ion-col>
             <h2>Searching for</h2>
             <ion-list no-lines>
-              <ion-item>item 1</ion-item>
-              <ion-item>item 2</ion-item>
-              <ion-item>item 3</ion-item>
-              <ion-item>item 4</ion-item>
-              <ion-item>item 5</ion-item>
+              <ion-item>Item 1</ion-item>
+              <ion-item>Item 2</ion-item>
+              <ion-item>Item 3</ion-item>
+              <ion-item>Item 4</ion-item>
+              <ion-item>Item 5</ion-item>
             </ion-list>
           </ion-col>
         </ion-row>
@@ -133,88 +134,20 @@
     </ion-card-content>
   </ion-card>
 
-  <div>
-    <h2 padding ion-text color="white">Friends</h2>
-    <ion-grid explore>
-      <ion-row>
-        <ion-col col-6 col-md-3 col-lg-2>
-          <ion-card (click)="openUserDetailPage()">
-            <ion-item>
-              <h1>Estegonza2002</h1>
-              <p>Chicago, IL - (2.6 mi)</p>
-              <button ion-button clear icon-only item-end><ion-icon color="grey2" name="ios-chatbubbles-outline"></ion-icon></button>
-            </ion-item>
-            <div><img src="assets/imgs/users/user-name/public/pic1.png" /></div>
-            <ion-item>
-              <button ion-button icon-start item-start outline color="grey2"><ion-icon name="md-camera"></ion-icon> 5</button>
-              <div item-end><ion-badge color="female">34</ion-badge> <ion-badge color="male">45</ion-badge></div>
-            </ion-item>
-          </ion-card>
-        </ion-col>
-        <ion-col col-6 col-md-3 col-lg-2>
-          <ion-card (click)="openUserDetailPage()">
-            <ion-item>
-              <h1>Estegonza2002</h1>
-              <p>Chicago, IL - (2.6 mi)</p>
-              <button ion-button clear icon-only item-end><ion-icon color="success" name="ios-chatbubbles"></ion-icon></button>
-            </ion-item>
-            <div><img src="assets/imgs/users/user-name/public/pic1.png" /></div>
-            <ion-item>
-              <button ion-button icon-start item-start outline color="grey2"><ion-icon name="md-camera"></ion-icon> 5</button>
-              <div item-end><ion-badge color="male">45</ion-badge></div>
-            </ion-item>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
-  <div>
-    <h2 padding ion-text color="white">Atending events</h2>
-    <ion-grid events>
-      <ion-row>
-        <ion-col col-12 col-md-6 col-lg-3>
-          <ion-card>
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/users/user-name/public/pic1.png">
-              </ion-avatar>
-              <h1>House Party</h1>
-              <p>Estegonza2002</p>
-              <button ion-button item-end color="secondary">RSVP</button>
-            </ion-item>
-            <div><img src="assets/imgs/parties/party1.jpg" /></div>
-            <ion-card-content>
-            <button ion-item detail-push color="white"><ion-icon name="ios-people" color="grey2" item-start></ion-icon>See who's coming <ion-badge item-end color="grey1">45</ion-badge></button>
-            <button ion-item detail-push color="white"><ion-icon name="md-pin" color="grey2" item-start></ion-icon>Chicago, IL - USA - 0 mi</button>
-            <div padding>
-              <p>For those in the lifestyle who appreciate a slender ankle in a red-soled pump, the hand-stitched interior of a classic German automobile and a 2007 Insignia, this is for you.</p>
-            </div>
-            </ion-card-content>
-            <button ion-button full>Buy Tickets</button>
-          </ion-card>
-        </ion-col>
-        <ion-col col-12 col-md-6 col-lg-3>
-          <ion-card>
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/users/user-name/public/pic1.png">
-              </ion-avatar>
-              <h1>House Party</h1>
-              <p>Estegonza2002</p>
-              <button ion-button item-end color="secondary">RSVP</button>
-            </ion-item>
-            <div><img src="assets/imgs/parties/party1.jpg" /></div>
-            <ion-card-content>
-            <button ion-item detail-push color="white"><ion-icon name="ios-people" color="grey2" item-start></ion-icon>See who's coming <ion-badge item-end color="grey1">45</ion-badge></button>
-            <button ion-item detail-push color="white"><ion-icon name="md-pin" color="grey2" item-start></ion-icon>Chicago, IL - USA - 0 mi</button>
-            <div padding>
-              <p>For those in the lifestyle who appreciate a slender ankle in a red-soled pump, the hand-stitched interior of a classic German automobile and a 2007 Insignia, this is for you.</p>
-            </div>
-            </ion-card-content>
-            <button ion-button full>Buy Tickets</button>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+  <h2 padding>Friends</h2>
+  <ion-grid explore>
+    <ion-row>
+      <ion-col *ngFor="let user of users" col-6 col-md-3 col-lg-2>
+        <user></user>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h2 padding>Atending events</h2>
+  <ion-grid events>
+    <ion-row>
+      <ion-col *ngFor="let event of events" col-12 col-md-6 col-lg-3>
+        <event></event>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
