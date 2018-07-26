@@ -10,21 +10,21 @@
       <ion-grid user-type>
         <ion-row>
           <ion-col>
-            <ion-item no-lines color="grey2">
+            <ion-item no-line color="grey3">
              <ion-label>Couple</ion-label>
              <ion-checkbox checked="true" color="primary"></ion-checkbox>
            </ion-item>
           </ion-col>
           <ion-col>
-            <ion-item no-lines color="grey2">
+            <ion-item no-line color="grey3">
              <ion-label>Female</ion-label>
-             <ion-checkbox color="primary"></ion-checkbox>
+             <ion-checkbox color="male"></ion-checkbox>
            </ion-item>
           </ion-col>
           <ion-col>
-            <ion-item no-lines color="grey2">
+            <ion-item no-line color="grey3">
              <ion-label>Male</ion-label>
-             <ion-checkbox color="primary"></ion-checkbox>
+             <ion-checkbox color="female"></ion-checkbox>
            </ion-item>
           </ion-col>
         </ion-row>
@@ -32,23 +32,18 @@
       <button ion-button icon-start block color="facebook"><ion-icon name="logo-facebook" item-left></ion-icon>Signup with Facebook</button>
       <p padding ion-text color="grey2" text-center>or</p>
       <ion-list form-list no-lines>
-        <h3 text-center>Signup with email</h3>
-        <ion-item >
-          <ion-icon name="md-person" item-left color="grey2"></ion-icon>
+        <h3 text-center>Signup with email</h3> 
+        <ion-item>
           <ion-label floating>What should we call you?</ion-label>
           <ion-input type="text"></ion-input>
         </ion-item>
-        <ion-item >
-          <ion-icon name="ios-send" item-left color="grey2"></ion-icon>
+        <ion-item>
           <ion-label floating>Username (email)</ion-label>
           <ion-input type="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon name="md-lock" item-left color="grey2"></ion-icon>
           <ion-label floating>Password</ion-label>
-          <ion-input type="text" *ngIf="showPasswordText"></ion-input>
-          <ion-input type="password" *ngIf="!showPasswordText" ></ion-input>
-          <button ion-button clear icon-only item-right color="grey2" (click)="showPasswordText = !showPasswordText"><ion-icon name="eye"></ion-icon></button>
+          <ion-input type="password"></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button block>Login</button>

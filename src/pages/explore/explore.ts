@@ -10,6 +10,7 @@ import { UserSettingsPage } from '../user-settings/user-settings';
   templateUrl: 'explore.html',
 })
 export class ExplorePage {
+  root = 'ExplorePage';
 
   users : any[]=[]
 

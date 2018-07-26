@@ -5,7 +5,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <div class="five-hundred">
     <ion-list>
       <button ion-item (click)="openAaaPagesPage()">Page List</button>
@@ -13,7 +13,10 @@
       <button ion-item>Privacy Policy</button>
       <button ion-item>Terms & Conditions</button>
     </ion-list>
-    <button ion-button block color="grey2">Log Out</button>
-    <p padding ion-text color="grey2" text-center>Version 1.0</p>
+    <div padding>
+      <button ion-button block color="grey2">Log Out</button>
+      <button ion-button block color="grey2" outline>Delete account</button>
+      <p padding ion-text color="grey2" text-center>Version 1.0</p>
+    </div>
   </div>
 </ion-content>
