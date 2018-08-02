@@ -7,13 +7,13 @@
     </ion-buttons>
     <ion-title>Events</ion-title>
     <ion-buttons end>
-      <button color="primary" ion-button icon-only (click)="openEventAePage()">
+      <button ion-button icon-only (click)="openEventAePage()">
         <ion-icon name="md-add-circle"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
   <ion-toolbar mode="md">
-    <ion-segment mode="md" color="dark">
+    <ion-segment mode="md">
       <ion-segment-button value="chat">Public</ion-segment-button>
       <ion-segment-button value="messages">Private</ion-segment-button>
       <ion-segment-button value="my-events">My Events</ion-segment-button>
@@ -22,7 +22,7 @@
 </ion-header>
 
 
-<ion-content fullscreen #myContent>
+<ion-content>
   <ion-grid events>
     <ion-row>
       <ion-col *ngFor="let event of events" col-12 col-md-6 col-lg-3>

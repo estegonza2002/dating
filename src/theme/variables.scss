@@ -22,8 +22,6 @@ $app-direction: ltr;
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 
-$text-color: #152934;
-$background-color: #D2D7DB;
 
 
 // Named Color Variables
@@ -35,13 +33,14 @@ $background-color: #D2D7DB;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #6B55FE,
-  secondary:  #FE62A7,
-  danger:     #f53d3d,
+  primary:    #4ab8b8,
+  secondary:  #d4d6c8,
+  danger:     #ff5d5d,
   success:    #7ED321,
   light:      #f4f4f4,
-  dark:       #152934,
-  grey1:      (base: #5A6871, contrast: #f4f4f4),
+  dark:       #52524e,
+  darkest:    #242424,
+  grey1:      (base: #9a9b94, contrast: #f4f4f4),
   grey2:      #A6B0B8,
   grey3:      #F1F1F1,
   grey4:      #D2D7DB,
@@ -57,7 +56,6 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-$item-ios-detail-push-color: color($colors, grey2);
 
 
 // App Material Design Variables
@@ -81,7 +79,7 @@ $item-ios-detail-push-color: color($colors, grey2);
 // so that the above variables are used and Ionic's
 // default are overridden.
 
-@import "ionic.theme.default";
+@import "ionic.theme.dark";
 
 
 // Ionicons

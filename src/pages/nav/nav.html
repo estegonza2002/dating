@@ -1,12 +1,9 @@
-<ion-nav [root]="rootPage"></ion-nav>
-<!-- <ion-split-pane when="lg">
+<ion-split-pane when="lg">
   <ion-menu [content]="content">
     <ion-header>
-      <ion-navbar>
-        <ion-title>Menu Title</ion-title>
-      </ion-navbar>
+      <ion-title>Menu Title</ion-title>
     </ion-header>
-    <ion-content color="white">
+    <ion-content>
       <ion-list>
         <button ion-item (click)="open('ExplorePage')" menuClose>Explore</button>
         <button ion-item (click)="open('ConnectPage')" menuClose>Connect</button>
@@ -14,5 +11,5 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-  <ion-nav [root]="rootPage" main #content></ion-nav>
-</ion-split-pane> -->
+  <ion-nav [root]="root" main #content></ion-nav>
+</ion-split-pane>

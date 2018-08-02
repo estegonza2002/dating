@@ -1,4 +1,3 @@
-<!-- <ion-header no-border [elasticheader]="myContent"> -->
 <ion-header>
   <ion-navbar>
     <ion-title>Estegonza2002</ion-title>
@@ -8,29 +7,38 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  <ion-toolbar profile-detail-toolbar>
+  <!-- <ion-toolbar profile-detail-toolbar>
     <ion-grid>
       <ion-row>
         <ion-col>
-          <button ion-button block  icon-only color="grey1"><ion-icon name="ios-chatbubbles" ></ion-icon></button>
+          <button ion-button block icon-only color="dark"><ion-icon name="ios-chatbubbles"></ion-icon></button>
         </ion-col>
         <ion-col>
-          <button ion-button block icon-only color="grey1"><ion-icon name="ios-mail" ></ion-icon></button>
+          <button ion-button block icon-only color="dark"><ion-icon name="ios-mail"></ion-icon></button>
         </ion-col>
         <ion-col>
-          <button ion-button block  icon-only color="grey1"><ion-icon name="md-person-add" ></ion-icon> </button>
+          <button ion-button block icon-only color="dark"><ion-icon name="md-person-add"></ion-icon> </button>
         </ion-col>
         <ion-col>
-          <button ion-button block icon-only color="grey1"><ion-icon name="md-heart" ></ion-icon></button>
+          <button ion-button block icon-only color="dark"><ion-icon name="md-heart"></ion-icon></button>
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-toolbar>
+  </ion-toolbar> -->
 </ion-header>
 
 
-<ion-content has-bouncing="false" fullscreen #myContent>
-  <ion-slides profile-slide pager="true" loop="true" parallax="true">
+<ion-content has-bouncing="false">
+    <ion-fab right bottom>
+      <button ion-fab color="secondary"><ion-icon name="ios-arrow-up-outline"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+    <ion-slides profile-slide pager="true" loop="true" parallax="true">
     <ion-slide>
       <img src="assets/imgs/users/user-name/public/profile-pic-1.jpg" imageViewer/>
     </ion-slide>
@@ -42,7 +50,7 @@
     </ion-slide>
   </ion-slides>
 
-  <ion-card profile-detail-card>
+  <ion-card profile-detail-card class="nine-sixty">
     <ion-card-header>Info</ion-card-header>
     <ion-card-content>
       <ion-grid profile-grid>
@@ -56,7 +64,7 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <h2> Status</h2>
+            <h2>Status</h2>
             <ion-list no-lines>
               <ion-item>Item 1</ion-item>
               <ion-item>Item 2</ion-item>
@@ -83,20 +91,24 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card profile-detail-card>
-    <ion-card-header>About</ion-card-header>
-    <ion-card-content>
-      <ion-grid profile-grid>
+  <ion-card profile-detail-card class="nine-sixty">
+    <ion-card-header>
+      <ion-grid profile-grid-header>
         <ion-row>
           <ion-col col-4>
+            About
           </ion-col>
           <ion-col col-4>
-            <h2>Him</h2>
+            Him
           </ion-col>
           <ion-col col-4>
-            <h2>Her</h2>
+            Her
           </ion-col>
         </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid profile-grid>
         <ion-row>
           <ion-col col-4>
             <p>Age</p>

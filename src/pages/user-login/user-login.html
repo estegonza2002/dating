@@ -11,20 +11,16 @@
   <div class="five-hundred">
     <form>
       <button ion-button icon-start block color="facebook"><ion-icon name="logo-facebook" item-left></ion-icon>Login with Facebook</button>
-      <p padding ion-text color="grey2" text-center>or</p>
-      <ion-list form-list no-lines>
-        <h3 text-center>Login with email</h3>
+      <div class="strike"><h2 class="no-span" ion-text color="dark">or</h2></div>
+      <ion-list form-list>
+        <h3>Login with email</h3>
         <ion-item >
-          <ion-icon name="ios-send" item-left color="grey2"></ion-icon>
           <ion-label floating>Username (email)</ion-label>
           <ion-input type="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon name="md-lock" item-left color="grey2"></ion-icon>
           <ion-label floating>Password</ion-label>
-          <ion-input type="text" *ngIf="showPasswordText"></ion-input>
-          <ion-input type="password" *ngIf="!showPasswordText" ></ion-input>
-          <button ion-button clear icon-only item-right color="grey2" (click)="showPasswordText = !showPasswordText"><ion-icon name="eye"></ion-icon></button>
+          <ion-input type="password"></ion-input>
         </ion-item>
       </ion-list>
       <button ion-button block>Login</button>

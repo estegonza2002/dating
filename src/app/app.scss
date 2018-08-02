@@ -2,6 +2,27 @@
   max-width: 500px !important;
   margin: 0 auto !important;
 }
+.nine-sixty {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+.strike {
+  h2.no-span {
+    display: table;
+    white-space: nowrap;
+    padding: 1rem 1.5%;
+    &:before, &:after {
+      border-top: 1px solid color($colors, dark);
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.7em;
+      width: 50%;
+    }
+    &:before { right: 1.5%; }
+    &:after { left: 1.5%; }
+  }
+}
 ion-content {
   p {
     font-size: 1.6rem;
@@ -52,11 +73,9 @@ ion-grid {
     ion-card {
       width: 100%;
       border-radius: 5px;
-      margin: 0 0 1rem 0;
-      background-color: color($colors, white);
+      margin: 0;
       ion-item {
         padding-left: 8px;
-        background-color: color($colors, white);
         h1 {
           font-size: 1.4rem;
           font-weight: bold;
@@ -80,15 +99,16 @@ ion-grid {
       width: 100%;
       border-radius: 5px;
       margin: 0 0 1rem 0;
-      background-color: color($colors, white);
       ion-card-content {
         padding: 0;
+        p {
+          color: color($colors, grey3)
+        }
       }
       .button-btm {
         margin: 0px;
       }
       ion-item {
-        background-color: color($colors, white);
         h1 {
           font-size: 2rem;
           font-weight: bold;
@@ -98,51 +118,69 @@ ion-grid {
   }
 }
 ion-list {
+  &[general] {
+    [ion-item],
+    ion-item {
+      background: none;
+      padding-left: 0;
+      border-bottom: 1px solid color($colors, darkest) !important;
+    }
+  }
+
   &[chat] {
     ion-item {
-      background-color: color($colors, white);
     }
   }
   &[messages] {
     ion-item {
-      background-color: color($colors, white);
     }
   }
   &[form-list] {
     ion-item {
-      border-bottom: 1px solid color($colors, grey2) !important;
-    }
-    ion-icon[item-left], {
-      margin-bottom: -12px;
+      background-color: transparent;
+      padding-left: 0;
     }
     ion-label {
-      color: color($colors, grey1);
+      color: color($colors, grey2);
+    }
+    ion-input {
+        border-bottom: 1px solid color($colors, dark);
     }
   }
 }
 
 ion-card {
   &[profile-detail-card] {
-    background-color: color($colors, white);
+    margin-bottom: 1.5rem !important;
     border-radius: 5px;
     ion-card-header {
-      background-color: color($colors, grey1);
-      color: color($colors, light);
-      padding: 16px 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      background-color: color($colors, dark);
+      color: color($colors, grey3);
     }
     ion-card-content {
       padding: 8px;
       p {
-        color: color($colors, grey1);
+        color: color($colors, grey3);
       }
     }
     ion-grid {
+      &[profile-grid-header] {
+        padding: 0;
+        ion-row {
+          padding: 0;
+        }
+        ion-col {
+          padding: 0;
+        }
+      }
       &[profile-grid] {
         padding: 0;
         ion-row {
           margin: 0;
           padding: 1rem 0;
-          border-bottom: 1px solid color($colors, grey3);
+          border-bottom: 1px solid color($colors, dark);
           &:last-child {
             border-bottom: none;
           }
@@ -162,18 +200,15 @@ ion-card {
           h2 {
             font-weight: bold;
             margin-bottom: 1rem;
-            color: color($colors, grey1);
           }
           ion-list {
             ion-item {
               font-size: 1.4rem;
               padding-left: 0;
               min-height: 2.4rem;
-              background-color: color($colors, white);
               ion-label {
                 white-space: normal;
                 margin: 2px 8px 2px 0px;
-                color: color($colors, grey1);
               }
             }
           }
@@ -206,7 +241,7 @@ ion-toolbar {
 ion-slides {
   &[profile-slide] {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 1.5rem auto;
     max-height: 375px;
     .swiper-pagination-bullet-active {
       background-color: color($colors, secondary) !important;
